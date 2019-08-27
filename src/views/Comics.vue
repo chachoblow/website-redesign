@@ -1,55 +1,25 @@
 <template>
   <div class="home">
     <div id="image-wrapper" :style="menuStyle"></div>
-    <Menu :menuItems="mainMenu" v-on:change-background="changeBackgrounds($event)"/>
+    <Menu v-on:change-background="changeBackgrounds($event)"/>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import Menu from '@/components/Menu.vue'; // @ is an alias to /src
+import Menu from '@/components/shared/Menu.vue'; // @ is an alias to /src
 
-const mainMenu = [
+const comicsMenu = [
   {
-      id: 'comcis',
-      title: 'Comics',
-      backgroundImage: require('../assets/menu/comics-invert.jpg'),
+    id: 'branches',
+    title: 'Branches',
+    backgroundImage: require('../assets/menu/comics-invert.jpg'),
   },
   {
-      id: 'illustrations',
-      title: 'Illustrations',
-      backgroundImage: require('../assets/menu/illustrations-invert.jpg'),
-  },
-  {
-      id: 'animations',
-      title: 'Animations',
-      backgroundImage: require('../assets/menu/animations-invert.jpg'),
-  },
-  {
-      id: 'photos',
-      title: 'Photos',
-      backgroundImage: require('../assets/menu/photos-invert.jpg'),
-  },
-  {
-      id: 'virtualFixtures',
-      title: 'Virtual Fixtures',
-      backgroundImage: require('../assets/menu/virtual-fixtures-invert.jpg'),
-  },
-  {
-      id: 'findNeo',
-      title: 'Find NEO',
-      backgroundImage: require('../assets/menu/find-neo-invert.jpg'),
-  },
-  {
-      id: 'lineCollection',
-      title: 'Line Collection',
-      backgroundImage: require('../assets/menu/line-collection-invert.jpg'),
-  },
-  {
-      id: 'processingSketches',
-      title: 'Processing Sketches',
-      backgroundImage: require('../assets/menu/processing-sketches-invert.jpg'),
-  },
+    id: 'branches',
+    title: 'Branches',
+    backgroundImage: require('../assets/menu/branches-invert.jpg'),
+  }
 ];
 
 @Component({
